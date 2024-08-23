@@ -15,7 +15,7 @@ const UserList: React.FC = () => {
   const sortType = useSelector((state: RootState) => state.user.sortType);
   useEffect(() => {
     dispatch(fetchUserList());
-  }, [userList]);
+  }, []);
   const onHandleChangeSort = (value: string) => {
     dispatch(sortList(value));
   };
